@@ -9,11 +9,12 @@ import java.sql.SQLException;
  * Created by tan on 2017/1/24.
  */
 public class MyConnection {
+
     public static Connection getConn() {
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/crawler";
+        String url = "jdbc:mysql://119.23.207.212:3306/yoomeda";
         String username = "root";
-        String password = "123456";
+        String password = "yMei@061706!";
         Connection conn = null;
         try {
             Class.forName(driver); //classLoader,加载对应驱动
@@ -25,4 +26,5 @@ public class MyConnection {
         }
         return conn;
     }
+
 }

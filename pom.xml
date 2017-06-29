@@ -21,40 +21,40 @@
         </plugins>
     </build>
     <repositories>
-        <repository>
-            <id>local-nexus</id>
-            <url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/central/</url>
-        </repository>
-        <repository>
-            <id>local-nexus-3rd</id>
-            <url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/thirdparty/</url>
-        </repository>
-        <repository>
-            <id>central</id>
-            <name>Central Repository</name>
-            <url>http://svn.jinhuatuo.com:8081/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
+        <!--<repository>-->
+            <!--<id>local-nexus</id>-->
+            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/central/</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<id>local-nexus-3rd</id>-->
+            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/thirdparty/</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<id>central</id>-->
+            <!--<name>Central Repository</name>-->
+            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/groups/public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
         <repository>
             <id>central2</id>
             <url>http://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
-    <distributionManagement>
-        <repository>
-            <id>dzg-nexus-release</id>
-            <url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>dzg-nexus-snapshots</id>
-            <url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>dzg-nexus-release</id>-->
+            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/releases/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>dzg-nexus-snapshots</id>-->
+            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/snapshots/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
     <dependencies>
         <dependency>
             <groupId>us.codecraft</groupId>
@@ -71,5 +71,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.36</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.0.2-FINAL</version>
+        </dependency>
+
     </dependencies>
 </project>

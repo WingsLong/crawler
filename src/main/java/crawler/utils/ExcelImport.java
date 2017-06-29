@@ -22,15 +22,15 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 
 public class ExcelImport {
 	public static void main(String[] args) throws FileNotFoundException {
-		HashMap<String,ArrayList<ArrayList>> result = ExcelImport.read("c:\\a.xls");
-		for(Entry<String,ArrayList<ArrayList>> et:result.entrySet())
+		HashMap<String,ArrayList<ArrayList<String>>> result = ExcelImport.read("c:\\a.xls");
+		for(Entry<String,ArrayList<ArrayList<String>>> et:result.entrySet())
 		{
 			System.out.println(et.getKey()+"******************");
 			System.out.println(StringOperator.list2String(et.getValue()));
 		}
 	}
-	public static HashMap<String,ArrayList<ArrayList>> read(FileInputStream fis) {
-		HashMap<String,ArrayList<ArrayList>> result = new HashMap<String,ArrayList<ArrayList>>();
+	public static HashMap<String,ArrayList<ArrayList<String>>> read(FileInputStream fis) {
+		HashMap<String,ArrayList<ArrayList<String>>> result = new HashMap<String,ArrayList<ArrayList<String>>>();
 		try {
 			HSSFWorkbook workbook = new HSSFWorkbook(fis);
 			// 创建对工作表的引用。
@@ -43,7 +43,7 @@ public class ExcelImport {
 //				System.out.println("==========开始第 " + i + " 个sheet============");
 				HSSFSheet childSheet = workbook.getSheetAt(i);
 				String sheetName = workbook.getSheetName(i);
-				ArrayList<ArrayList> data = new ArrayList<ArrayList>();
+				ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
 				result.put(sheetName, data);
 				for (int r = 0; r < childSheet.getPhysicalNumberOfRows(); r++) {// 循环该子sheet row
 //					System.out.println("childSheet " + (r + 1) + "行数:: "+ childSheet.getPhysicalNumberOfRows());
@@ -93,10 +93,10 @@ public class ExcelImport {
 		}
 		return result;
 	}
-	public static HashMap<String,ArrayList<ArrayList>> read(String filename) throws FileNotFoundException {
+	public static HashMap<String,ArrayList<ArrayList<String>>> read(String filename) throws FileNotFoundException {
 		if(new File(filename).exists())
 			return read(new FileInputStream(filename));
 		else
-			return new HashMap<String,ArrayList<ArrayList>>();
+			return new HashMap<String,ArrayList<ArrayList<String>>>();
 	}
 }

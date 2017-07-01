@@ -18,9 +18,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ *  Excel账号导入到平台中，
  *
- *
- *@autor Administrator
+ *@autor zhongjl
  *@date 2017-06-29 22:27
  *
  **/
@@ -29,7 +29,7 @@ public class ExcelToInsertPlat {
     private static Logger log = LoggerFactory.getLogger(ExcelToInsertPlat.class);
 
     public static void main(String[] args) throws Exception {
-        Connection conn = MyConnection.getConn();
+        Connection conn = MyConnection.getConn(2);
         try {
             PreparedStatement preStat = conn.prepareStatement("INSERT INTO `oa_plat` (`type`, `owner_id`, `title`, `uid`, `prices`, `position`, `tags`, `fans`, `data`, `icon_url`,  `locked`, `check_status`) " +
                     "VALUES ( ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?);");

@@ -14,47 +14,47 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <repositories>
-        <!--<repository>-->
-            <!--<id>local-nexus</id>-->
-            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/central/</url>-->
-        <!--</repository>-->
-        <!--<repository>-->
-            <!--<id>local-nexus-3rd</id>-->
-            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/thirdparty/</url>-->
-        <!--</repository>-->
-        <!--<repository>-->
-            <!--<id>central</id>-->
-            <!--<name>Central Repository</name>-->
-            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/groups/public/</url>-->
-            <!--<releases>-->
-                <!--<enabled>true</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
+        <repository>
+            <id>local-nexus</id>
+            <url>http://maven.jianwings.com:8075/nexus/content/repositories/central/</url>
+        </repository>
+        <repository>
+            <id>local-nexus-3rd</id>
+            <url>http://maven.jianwings.com:8075/nexus/content/repositories/thirdparty/</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://maven.jianwings.com:8075/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>central2</id>
             <url>http://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>dzg-nexus-release</id>-->
-            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/releases/</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>dzg-nexus-snapshots</id>-->
-            <!--<url>http://svn.jinhuatuo.com:8081/nexus/content/repositories/snapshots/</url>-->
-        <!--</snapshotRepository>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <url>http://maven.jianwings.com:8075/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://maven.jianwings.com:8075/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>us.codecraft</groupId>
